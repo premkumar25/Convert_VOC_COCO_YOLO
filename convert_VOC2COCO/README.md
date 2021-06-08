@@ -67,9 +67,9 @@ COCO format is usually a `.json` file.
 			"image_id": "maksssksksss0",
 			"bbox": [
 				79,
-        105,
-        109,
-        142
+				105,
+				109,
+				142
 			],
 			"category_id": 0,
 			"id": 1,
