@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Nehal_AmazonSet2_2611</folder>
+	<filename>AMZ01866__41hHQC--VqL.jpg</filename>
+	<path>C:\Users\Nehal.Gupta\Desktop\Nehal_AmazonSet2_2611\AMZ01866__41hHQC--VqL.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1000</width>
+		<height>1000</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>necklace</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>141</xmin>
+			<ymin>136</ymin>
+			<xmax>816</xmax>
+			<ymax>790</ymax>
+		</bndbox>
+	</object>
+</annotation>
