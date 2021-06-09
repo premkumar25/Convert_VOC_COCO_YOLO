@@ -25,11 +25,17 @@ for xl in xmls:
         xml_data = xmltodict.parse(f, xml_attribs=False)
 
     try:
-        for box in xml_data["annotation"]["object"]:
+        if isinstance(xml_data["annotation"]["object"], list):
+            for box in xml_data["annotation"]["object"]:
+                cls_name = box['name']
+                coord = box["bndbox"]
+                txt_data.append(cls_name + " " + coord["xmin"] + " " + coord["ymin"] + " " + coord["xmax"] + " " + coord["ymax"])
+        else:
+            box = xml_data["annotation"]["object"]
             cls_name = box['name']
             coord = box["bndbox"]
             txt_data.append(cls_name + " " + coord["xmin"] + " " + coord["ymin"] + " " + coord["xmax"] + " " + coord["ymax"])
-
+        
         with open(os.path.join(txt_path, file_id.rstrip('.xml') + '.txt'), "w") as file:
             file.write("\n".join(txt_data))
 
